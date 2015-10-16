@@ -29,6 +29,15 @@ gulp.task('png', function() {
   .pipe(gulp.dest('./public/'))
 });
 
+gulp.task('jpg', function() {
+  gulp.src('./src/**/*.jpg')
+  .pipe(gulp.dest('./public/'))
+});
+gulp.task('ico', function() {
+  gulp.src('./src/**/*.ico')
+  .pipe(gulp.dest('./public/'))
+});
+
 gulp.task('html', function() {
   gulp.src('./src/**/*.html')
   .pipe(gulp.dest('./public/'))
@@ -64,4 +73,4 @@ gulp.task('watch', function(){
   gulp.watch('./src/**/*.styl', ['stylus'])
 })
 
-gulp.task('default', ['coffee', 'jade', 'stylus', 'watch', 'start', 'javascripts', 'html', 'png', 'font'])
+gulp.task('default', ['coffee', 'jade', 'stylus', 'watch', 'start', 'javascripts', 'html', 'png', 'font', 'jpg', 'ico'])

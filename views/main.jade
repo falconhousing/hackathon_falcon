@@ -1,0 +1,18 @@
+extends layout.jade
+mixin TabHeader(text, image)
+	li.tab-header
+		div.tab-header-image.inline(style="background-image: url(#{image})")
+		div.tab-header-text.inline #{text}
+
+block content
+	.main-container
+		.left-content.inline
+		.middle-content.inline(map="false")
+			.middle-container
+				.company-name Withyou
+				.company-description This is an unnecessary long explanantion for this. One line would suffice this description, really
+				.search-box-container
+					input#search-container(placeholder="Search for location or channel")
+			#map-container
+			audio.audio-player(preload="auto")
+		.right-content.inline

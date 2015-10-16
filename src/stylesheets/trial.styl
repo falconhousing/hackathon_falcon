@@ -1,0 +1,138 @@
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway Thin'), local('Raleway-Thin'), url(https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(https://fonts.gstatic.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v9/JbtMzqLaYbbbCL9X6EvaIwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+// body 
+// 	padding 0px
+// 	margin 0px
+
+// .banner 
+// 	height 500px
+// 	background-repeat no-repeat
+// 	background-size cover
+// 	background-image url("/images/banner.jpg")
+// 	color #fff
+// 	.heading-container
+// 		margin-top 200px	
+// 		text-align center
+// 		max-width 600px
+// 		margin 0 auto
+// 		padding-top 200px
+// 		color #000
+// 		.heading
+// 			font-width bold
+// 			font-size 40px
+		
+// 		.sub-heading 
+// 			font-size 24px
+		
+body, #main-content
+	width 	100%
+	height 	100%
+body 
+	padding 0px
+	margin 	0px
+	font-family Raleway
+	
+	.inline
+		display inline-block
+		vertical-align top
+	.hide
+		display none
+		
+	header
+		position fixed
+		width 100%
+		.header-container
+			height 44px
+			background-color #000
+	
+	#main-content
+		overflow hidden
+		padding-top 44px
+		.main-container
+			.left-content
+				background-color #321615FF
+				width 20%
+				height 100%
+			.middle-content
+				background-color #100000FF
+				width 60%
+				height 100%
+				&[map="false"] 
+					.middle-container
+						max-width 400px
+						margin 0 auto
+						transition 1s all
+						margin-top 150px
+						.company-name, .company-description
+							display block
+					#map-container
+						visibility hidden
+
+				&[map="true"] 
+					.middle-container
+						transition 1s all
+						.company-name, .company-description
+							display none
+					#map-container
+						visibility visible
+
+				.company-name
+					width 100px
+					margin 0 auto
+					padding 15px
+					font-size 24px
+					color #fff
+					text-align center
+					border-bottom 1px solid red
+				.company-description
+					margin 20px 0px
+					color #e6e6e6
+					text-align center
+					font-size 12px
+					
+				#search-container
+					outline none
+					border-radius 2px
+					padding 10px
+					height 40px
+					width 100%
+				#map-container
+					height 80%
+					width 100%
+					
+				.audio-player
+					width 100%;
+					position absolute
+					bottom 0px
+					background-color white
+					&.hide
+						display none
+				.audiojs
+					width 100%;
+						
+			.right-content
+				background-color #1D1E17FF
+				width 20%
+				height 100%

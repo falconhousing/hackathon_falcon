@@ -1,0 +1,129 @@
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway Thin'), local('Raleway-Thin'), url("https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWJBw1xU1rKptJj_0jans920.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url("https://fonts.gstatic.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url("https://fonts.gstatic.com/s/raleway/v9/JbtMzqLaYbbbCL9X6EvaIwzyDMXhdD8sAj6OAJTFsBI.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+body,
+#main-content {
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Raleway;
+}
+body .inline {
+  display: inline-block;
+  vertical-align: top;
+}
+body .hide {
+  display: none;
+}
+body header {
+  position: fixed;
+  width: 100%;
+}
+body header .header-container {
+  height: 44px;
+  background-color: #000;
+}
+body #main-content {
+  overflow: hidden;
+  padding-top: 44px;
+}
+body #main-content .main-container .left-content {
+  background-color: #321615;
+  width: 20%;
+  height: 100%;
+}
+body #main-content .main-container .middle-content {
+  background-color: #100000;
+  width: 60%;
+  height: 100%;
+}
+body #main-content .main-container .middle-content[map="false"] .middle-container {
+  max-width: 400px;
+  margin: 0 auto;
+  transition: 1s all;
+  margin-top: 150px;
+}
+body #main-content .main-container .middle-content[map="false"] .middle-container .company-name,
+body #main-content .main-container .middle-content[map="false"] .middle-container .company-description {
+  display: block;
+}
+body #main-content .main-container .middle-content[map="false"] #map-container {
+  visibility: hidden;
+}
+body #main-content .main-container .middle-content[map="true"] .middle-container {
+  transition: 1s all;
+}
+body #main-content .main-container .middle-content[map="true"] .middle-container .company-name,
+body #main-content .main-container .middle-content[map="true"] .middle-container .company-description {
+  display: none;
+}
+body #main-content .main-container .middle-content[map="true"] #map-container {
+  visibility: visible;
+}
+body #main-content .main-container .middle-content .company-name {
+  width: 100px;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #f00;
+}
+body #main-content .main-container .middle-content .company-description {
+  margin: 20px 0px;
+  color: #e6e6e6;
+  text-align: center;
+  font-size: 12px;
+}
+body #main-content .main-container .middle-content #search-container {
+  outline: none;
+  border-radius: 2px;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+}
+body #main-content .main-container .middle-content #map-container {
+  height: 80%;
+  width: 100%;
+}
+body #main-content .main-container .middle-content .audio-player {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-color: #fff;
+}
+body #main-content .main-container .middle-content .audio-player.hide {
+  display: none;
+}
+body #main-content .main-container .middle-content .audiojs {
+  width: 100%;
+}
+body #main-content .main-container .right-content {
+  background-color: #1d1e17;
+  width: 20%;
+  height: 100%;
+}

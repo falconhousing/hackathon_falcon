@@ -11,7 +11,8 @@ define(['backbone'], function(Backbone) {
     }
 
     AppRouter.prototype.routes = {
-      '': 'indexView'
+      '': 'indexView',
+      'main': 'mainView'
     };
 
     AppRouter.prototype.initialize = function() {
@@ -19,6 +20,12 @@ define(['backbone'], function(Backbone) {
     };
 
     AppRouter.prototype.indexView = function() {};
+
+    AppRouter.prototype.mainView = function() {
+      var path;
+      path = 'views/searchPlaces';
+      return this.startIndexView(path);
+    };
 
     AppRouter.prototype.startIndexView = function(path, options, callback) {
       return require([path], (function(_this) {

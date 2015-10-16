@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
 app.get('/', routes.index);
+app.get('/main', routes.main);
 
 var server = app.listen(process.env.PORT || 3000, function(){
     console.log("App Started at port "+(process.env.PORT || 3000));

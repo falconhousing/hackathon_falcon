@@ -2,11 +2,16 @@ define ['backbone'], (Backbone)->
 	class AppRouter extends Backbone.Router
 		routes:
 			''							: 'indexView'
+			'main'						: 'mainView'
 
 		initialize : ->
 			@handleHREF()
 
 		indexView : ->
+
+		mainView : ->
+			path = 'views/searchPlaces'
+			@startIndexView(path);
 
 		startIndexView: (path, options, callback)->
 			require [path], (IndexView)=>
