@@ -7,6 +7,7 @@ define ['backbone'], (Backbone)->
 			@handleHREF()
 
 		indexView : ->
+			@startIndexView('views/home_page', {})
 
 		startIndexView: (path, options, callback)->
 			require [path], (IndexView)=>
