@@ -1,0 +1,59 @@
+mixin functionality-item(header, sub_header, image_class)
+	.functionality-item
+		.functionality-item-image(class=image_class)
+		.functionality-item-content
+			.functionality-item-header #{header}
+			.functionality-item-subheader #{sub_header}
+mixin feature-item(header, image_class)
+	.feature-item
+		.feature-text #{header}
+		.feature-icon(class=image_class)
+
+mixin user-review(main_class, image_class, quote_text, user_name, user_profession)
+	.user-review(class=main_class)
+		.quote
+			.quote-start
+			.quote-text #{quote_text}
+			.quote-end
+		.user-details
+			.user-image(class=image_class)
+			.user-text
+				.user-name #{user_name}
+				.user-profession #{user_profession}
+
+.banner
+	.banner-text
+		.title 
+			span.titile-text REPAIRING MADE CONVENIENT, FAST AND 
+			span.hightlighter DELIGHTI
+			span.titile-text NG
+		.features
+			+feature-item('SUBMIT ISSUE'	, 'submit-issue-icon')
+			+feature-item('SELECT EXPERT'	, 'select-expert-icon')
+			+feature-item('SCHEDULE PICKUP'	, 'schedule-pickup-icon')
+			+feature-item('PAY LATER'		, 'pay-later-icon')
+.specialities
+	.specialities-item 2 MONTHS WARRANTY
+	.specialities-item FREE PICK-UP AND DROP
+	.specialities-item VERIFIED MERCHANTS
+
+.functionalities
+	.functionality-header WE WORK, YOU RELAX
+	.functionality-list
+		+functionality-item('PRECISE AND DETAILED QUOTES', 'Know Exacly what you are commiting to')
+		+functionality-item('COMPARE AND SELECT', 'Best Qoutes from the market, right at your screen ! Make your choice of price, duration and warranty')
+		+functionality-item('TRACK THE STATUS', 'Smart and convenient way to repair your device. Track the status real-time')
+		+functionality-item('SERVICE GAURANTEE', 'We Promise. We Deliver')
+
+.user-reviews-container
+	.user-reviews-header HEAR IT FROM OUR CUSTOMERS
+	.user-reviews-placeholder
+		.user-review-content(section="one")
+				.user-review-previous.user-review-next
+				.user-review-text
+					.user-review-all-content
+						+user-review("one", "user-image-1", "India is my country. All indians are my brothers and sisters. I love my country and i am proud of its rich and varied heritage. I shall always strive to be worthy of it", "Asheesh", "Software Devloper")
+						+user-review("two", "user-image-2", "India is my country. All indians are my brothers and sisters. I love my country and i am proud of its rich and varied heritage. I shall always strive to be worthy of it", "Asheesh", "Software Devloper")
+						+user-review("three", "user-image-3", "India is my country. All indians are my brothers and sisters. I love my country and i am proud of its rich and varied heritage. I shall always strive to be worthy of it", "Asheesh", "Software Devloper")
+
+				.user-review-previous.user-review-next

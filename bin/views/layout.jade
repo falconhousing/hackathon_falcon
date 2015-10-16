@@ -1,0 +1,12 @@
+html
+	head
+		title= title
+		link(rel="stylesheet", type="text/css", href="stylesheets/trial.css")
+		script(src="javascripts/requires.js", data-main="javascripts/main")
+	body(class="body")
+	header
+		include ../src/templates/header.jade
+	.main-content
+		include ../src/templates/index.jade
+	footer
+		include ../src/templates/footer.jade

@@ -1,0 +1,13 @@
+html
+	head
+		title= title
+		link(rel="stylesheet", type="text/css", href="/stylesheets/trial.css")
+		link(rel="stylesheet", type="text/css", href="/stylesheets/slick.css")
+		script(src="/javascripts/requires.js", data-main="/javascripts/main")
+	body(class="body")
+	header
+		include ../src/javascripts/templates/header.jade
+	#main-content
+		block content
+	footer
+		include ../src/javascripts/templates/footer.jade
