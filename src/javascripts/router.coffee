@@ -8,6 +8,7 @@ define ['backbone'], (Backbone)->
 			@handleHREF()
 
 		indexView : ->
+			@startIndexView('views/home_page', {})
 
 		mainView : ->
 			path = 'views/searchPlaces'

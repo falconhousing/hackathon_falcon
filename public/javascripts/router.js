@@ -19,7 +19,9 @@ define(['backbone'], function(Backbone) {
       return this.handleHREF();
     };
 
-    AppRouter.prototype.indexView = function() {};
+    AppRouter.prototype.indexView = function() {
+      return this.startIndexView('views/home_page', {});
+    };
 
     AppRouter.prototype.mainView = function() {
       var path;
