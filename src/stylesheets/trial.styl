@@ -22,6 +22,65 @@
   src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v9/JbtMzqLaYbbbCL9X6EvaIwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
+
+.home-content-container
+	height 100%
+	background-color black
+	.all-content
+		background-image url('/images/back1.png')
+		background-size 100% 100%
+		background-repeat no-repeat
+		height 100%
+		width 100%
+		.content1
+			position absolute
+			top 200px
+			left 50px
+		.info-container
+			width 300px
+			height 200px
+			background-size cover;
+			background-repeat no-repeat;
+		.login-btn
+			font-size 14px
+			margin-left 70px
+			margin-top 50px
+			display block
+			text-decoration none
+			width 250px
+			line-height 40px
+			text-align center
+			background-color #0D67B7
+			color #fff
+			border-radius 20px
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // body 
 // 	padding 0px
 // 	margin 0px
@@ -64,15 +123,32 @@ body
 		position fixed
 		width 100%
 		.header-container
+			padding 10px
 			height 44px
 			background-color #000
-	
+			box-sizing border-box
+			
+			.company
+				width 150px
+				height 30px
+				background-image url("/images/five.png")
+				background-repeat no-repeat
+				background-size 100% 100%
+				margin-left 10px
+
 	#main-content
 		overflow hidden
 		padding-top 44px
 		.main-container
+			background-image url('/images/one.png')
+			background-size no-repeat
+			background-size cover
+			z-index 0
 			.left-content
-				background-color #321615FF
+				background-image url('/images/two.png')
+				z-index 1
+				background-size no-repeat
+				background-size cover
 				width 20%
 				height 100%
 			.middle-content
@@ -99,19 +175,13 @@ body
 						visibility visible
 
 				.company-name
-					width 100px
-					margin 0 auto
-					padding 15px
-					font-size 24px
-					color #fff
-					text-align center
-					border-bottom 1px solid red
-				.company-description
-					margin 20px 0px
-					color #e6e6e6
-					text-align center
-					font-size 12px
-					
+					width 400px
+					height 100px
+					background-image url('/images/four.png')
+					background-size no-repeat
+					background-size cover
+					margin-bottom 50px
+									
 				#search-container
 					outline none
 					border-radius 2px
@@ -133,6 +203,42 @@ body
 					width 100%;
 						
 			.right-content
-				background-color #1D1E17FF
+				background-image url('/images/three.png')
+				background-size no-repeat
+				background-size cover
 				width 20%
 				height 100%
+				overflow auto
+				.audio-list
+					color #fff
+					padding 0px
+					margin 20px
+					.audio-item
+						display block
+						margin-bottom 40px
+				.user-details
+					max-width 160px
+					.player-image
+						background-image url("http://thenewtantra.com/wp-content/uploads//edd/2014/09/Icon-sound-file.png")
+						background-size cover
+						background-repeat no-repeat
+						width 15px
+						height 15px
+					.info
+						margin-right 10px
+						font-size 12px
+				.location
+					font-size 14px
+					margin-top 10px
+				.section
+					margin-top 5px
+				
+				.user-image
+					background-size cover
+					background-repeat no-repeat
+					width 40px
+					height 40px
+					display inline-block
+					border-radius 50%
+					vertical-align top
+					margin-right 10px

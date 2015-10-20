@@ -5,11 +5,6 @@ requirejs.config({
     'backbone': 'libs/backbone',
     'marionette': 'libs/marionette',
     'jade': 'libs/jade',
-<<<<<<< HEAD
-=======
-    'slick': 'libs/slick',
-    'cascade': 'libs/jquery.cascadingdropdown',
->>>>>>> fe81b7e84981d1999cd2dfd97307da3c8164b4de
     'audiojs': 'libs/audio.min'
   },
   shims: {

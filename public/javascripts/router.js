@@ -1,4 +1,5 @@
-var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
 define(['backbone'], function(Backbone) {
@@ -7,6 +8,7 @@ define(['backbone'], function(Backbone) {
     extend(AppRouter, superClass);
 
     function AppRouter() {
+      this.gotoMain = bind(this.gotoMain, this);
       return AppRouter.__super__.constructor.apply(this, arguments);
     }
 
@@ -15,12 +17,14 @@ define(['backbone'], function(Backbone) {
       'main': 'mainView'
     };
 
-    AppRouter.prototype.initialize = function() {
-      return this.handleHREF();
-    };
+    AppRouter.prototype.initialize = function() {};
 
     AppRouter.prototype.indexView = function() {
-      return this.startIndexView('views/home_page', {});
+      return $('.login-btn').on('click', this.gotoMain);
+    };
+
+    AppRouter.prototype.gotoMain = function() {
+      return this.navigate('main');
     };
 
     AppRouter.prototype.mainView = function() {
@@ -47,17 +51,7 @@ define(['backbone'], function(Backbone) {
     };
 
     AppRouter.prototype.handleHREF = function() {
-      var self;
-      self = this;
-      return $(document).on('click', 'a[href^="/"]', function(e) {
-        var href, url;
-        href = $(e.currentTarget).attr('href');
-        url = href.replace(/^\//, '').replace('\#\!\/', '');
-        self.navigate(url, {
-          trigger: true
-        });
-        return false;
-      });
+      return console.log("Yoo");
     };
 
     return AppRouter;

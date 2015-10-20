@@ -22,6 +22,41 @@
   src: local('Raleway Bold'), local('Raleway-Bold'), url("https://fonts.gstatic.com/s/raleway/v9/JbtMzqLaYbbbCL9X6EvaIwzyDMXhdD8sAj6OAJTFsBI.woff2") format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+.home-content-container {
+  height: 100%;
+  background-color: #000;
+}
+.home-content-container .all-content {
+  background-image: url("/images/back1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.home-content-container .all-content .content1 {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+}
+.home-content-container .all-content .info-container {
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-content-container .all-content .login-btn {
+  font-size: 14px;
+  margin-left: 70px;
+  margin-top: 50px;
+  display: block;
+  text-decoration: none;
+  width: 250px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #0d67b7;
+  color: #fff;
+  border-radius: 20px;
+}
 body,
 #main-content {
   width: 100%;
@@ -44,15 +79,34 @@ body header {
   width: 100%;
 }
 body header .header-container {
+  padding: 10px;
   height: 44px;
   background-color: #000;
+  box-sizing: border-box;
+}
+body header .header-container .company {
+  width: 150px;
+  height: 30px;
+  background-image: url("/images/five.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-left: 10px;
 }
 body #main-content {
   overflow: hidden;
   padding-top: 44px;
 }
+body #main-content .main-container {
+  background-image: url("/images/one.png");
+  background-size: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
 body #main-content .main-container .left-content {
-  background-color: #321615;
+  background-image: url("/images/two.png");
+  z-index: 1;
+  background-size: no-repeat;
+  background-size: cover;
   width: 20%;
   height: 100%;
 }
@@ -85,19 +139,12 @@ body #main-content .main-container .middle-content[map="true"] #map-container {
   visibility: visible;
 }
 body #main-content .main-container .middle-content .company-name {
-  width: 100px;
-  margin: 0 auto;
-  padding: 15px;
-  font-size: 24px;
-  color: #fff;
-  text-align: center;
-  border-bottom: 1px solid #f00;
-}
-body #main-content .main-container .middle-content .company-description {
-  margin: 20px 0px;
-  color: #e6e6e6;
-  text-align: center;
-  font-size: 12px;
+  width: 400px;
+  height: 100px;
+  background-image: url("/images/four.png");
+  background-size: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
 }
 body #main-content .main-container .middle-content #search-container {
   outline: none;
@@ -123,7 +170,50 @@ body #main-content .main-container .middle-content .audiojs {
   width: 100%;
 }
 body #main-content .main-container .right-content {
-  background-color: #1d1e17;
+  background-image: url("/images/three.png");
+  background-size: no-repeat;
+  background-size: cover;
   width: 20%;
   height: 100%;
+  overflow: auto;
+}
+body #main-content .main-container .right-content .audio-list {
+  color: #fff;
+  padding: 0px;
+  margin: 20px;
+}
+body #main-content .main-container .right-content .audio-list .audio-item {
+  display: block;
+  margin-bottom: 40px;
+}
+body #main-content .main-container .right-content .user-details {
+  max-width: 160px;
+}
+body #main-content .main-container .right-content .user-details .player-image {
+  background-image: url("http://thenewtantra.com/wp-content/uploads//edd/2014/09/Icon-sound-file.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+}
+body #main-content .main-container .right-content .user-details .info {
+  margin-right: 10px;
+  font-size: 12px;
+}
+body #main-content .main-container .right-content .location {
+  font-size: 14px;
+  margin-top: 10px;
+}
+body #main-content .main-container .right-content .section {
+  margin-top: 5px;
+}
+body #main-content .main-container .right-content .user-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-right: 10px;
 }

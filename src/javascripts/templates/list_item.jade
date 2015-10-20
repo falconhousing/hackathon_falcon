@@ -1,0 +1,11 @@
+li.audio-item
+	.user-image.inline(style="background-image: url(#{image})")
+	.user-details.inline
+		.user-name.section #{name}
+		.main-details.section
+			.inline.info.player-image(audio=audio)
+			.inline.info.info Posted at &nbsp;
+			.inline.info.place #{place}
+		.other-details.section
+			.info.created-at #{created_at}
+		.location #{lct}

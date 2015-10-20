@@ -5,10 +5,13 @@ define ['backbone'], (Backbone)->
 			'main'						: 'mainView'
 
 		initialize : ->
-			@handleHREF()
+			#@handleHREF()
 
 		indexView : ->
-			@startIndexView('views/home_page', {})
+			$('.login-btn').on('click', @gotoMain)
+
+		gotoMain : =>
+			this.navigate('main')
 
 		mainView : ->
 			path = 'views/searchPlaces'
@@ -26,15 +29,16 @@ define ['backbone'], (Backbone)->
 					callback()
 
 		handleHREF: ->
-			self = this			
-			$(document).on 'click', 'a[href^="/"]', (e)->
-				href = $(e.currentTarget).attr 'href'
+			console.log "Yoo"
+			# self = this			
+			# $(document).on 'click', 'a[href^="/"]', (e)->
+			# 	href = $(e.currentTarget).attr 'href'
 
-				url = href
-						.replace  /^\//  , ''
-						.replace '\#\!\/', ''
+			# 	url = href
+			# 			.replace  /^\//  , ''
+			# 			.replace '\#\!\/', ''
 
-				self.navigate url, trigger: true
-				return false	
+			# 	self.navigate url, trigger: true
+			# 	return false	
 
 	return AppRouter
